@@ -8,32 +8,56 @@
 
 <body>
 	<!-- the entire body must be written by student -->
-	<h1>Signup Form Car</h1>
-	<form method="post">
-		Name<input type="text" required="Yes" id="name" placeholder="Name"></input><br><br>
+	<div class="form-container">
+        <h1>Signup Form</h1>
+        <form action="/submit-signup" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Name" required><br><br>
 
-		Email<input type="email" required="Yes" id="email" placeholder="Email"></input><br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Email" required><br><br>
 
-		Gender<input type="radio" required="Yes" name="gender" checked>Male
-		<input type="radio" required="Yes" name="gender">Female</input><br><br>
+            <fieldset>
+                <legend>Gender:</legend>
+                <label for="gender_m">
+                    <input type="radio" id="gender_m" name="gender" value="male" required>
+                    Male
+                </label>
+                <label for="gender_f">
+                    <input type="radio" id="gender_f" name="gender" value="female" required>
+                    Female<br>
+                </label>
+            </fieldset><br>
 
-		Car Brands<select><option>select</option>
-		<option>Audi</option><option>BMW</option><option>Tiago</option></select><br><br>
+            <label for="cars">Car Brands:</label>
+            <select id="cars" name="cars" required>
+                <option value="" disabled selected>--Please choose an option--</option>
+                <option value="toyota">Toyota</option>
+                <option value="honda">Honda</option>
+                <option value="ford">Ford</option>
+                <option value="bmw">BMW</option>
+                <option value="audi">Audi</option>
+            </select><br><br>
 
-		Age<input type="number" required="Yes" id="age" placeholder="Age"></input><br><br>
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" placeholder="Age" required><br><br>
 
-		DOB<input type="date" required="Yes" id="dob"></input><br><br>
-	    
-		Phone Number<input type="tel" required="No" id="tel" placeholder="xxx-xxx-xxxx"></input><br><br>
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required><br><br>
 
-		Password<input type="password" required="Yes" id="password" placeholder="password"></input><br><br>
+            <label for="tel">Phone Number:</label>
+            <input type="tel" id="tel" name="tel" placeholder="xxx-xxx-xxxx"><br><br>
 
-		I agree to the TOS<input type="checkbox" required="Yes" id="tos"></input><br><br>
-		<input type="submit"></input></form>
-		
-    <script type="text/javascript" src="./script.js">
-</script>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Password" required><br><br>
 
+            <label for="tos">
+                <input type="checkbox" id="tos" name="tos" required>
+                I agree to the TOS
+            </label><br><br>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
 </body>
-
 </html>
